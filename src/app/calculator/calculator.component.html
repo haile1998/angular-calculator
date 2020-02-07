@@ -1,0 +1,15 @@
+<h1>Awesome Calculator</h1>
+<input type="text" id="num1" [value]="firstnumber" (change)="onFirstChange($event.target.value)"
+    placeholder="Nhập số thứ nhất">
+<select name="operator" id="operator" [value]="operator" (change)="onOperatorChange($event.target.value)">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type="text" id="num2" [value]="secondnumber" (change)="onSecondChange($event.target.value)"
+    placeholder="Nhập số thứ hai">
+<button (click)="calculate()">Thực thi</button>
+<div>
+    {{output}}
+</div>
